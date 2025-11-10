@@ -40,6 +40,27 @@ var fileName= "pdfData.jpg";
     console.log('Delete');
  }
 
+/** Problem 05 - ( PH Email Generator ) */
+var student= { name: "jhankar" , roll: 1014 ,department: "cse" };
+//write your code here
+//var email=student.name+student.roll+student.department+'.'+'@ph.ac.bd';
+//console.log(email);
+//var concat=student.name.concat(student.roll).concat(student.department).concat('.').concat('@ph.ac.bd');
+//console.log(concat);
+var short=student.name.concat(student.roll,student.department,'.','@ph.ac.bd');
+console.log(short);
+
+/** Problem 06 : (Current Salary ) */
+var experience = 30;
+var startingSalary = 45000;
+//write your code here
+let c=1;
+while(c<=experience){
+var inc=(startingSalary/100)*5;
+    startingSalary+=inc;
+    c++;
+    
+}console.log(startingSalary.toFixed(2));
 
 
 
