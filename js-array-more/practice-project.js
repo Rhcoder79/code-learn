@@ -71,7 +71,99 @@ Output:
 
 'person working hard a am I'
 */
- const statement = 'I am a hard working person'
-for(const state of statement){
-    console.log(state);
+ const statement = 'I am a hard working person';
+const slice=statement.split(' ');
+/*console.log(slice);// for reverse system
+//const repeat=slice.reverse();
+//console.log(repeat);
+//const rejoin=repeat.join(' ');
+console.log("'"+rejoin+"'");*/
+
+/*let reStatement="";//for loop uses
+for(let g=slice.length-1;g>=0;g--){
+  const word=slice[g];
+  console.log(word);
+  reStatement+=word;
+if(g!==0){            
+    reStatement+=" ";
 }
+
+}  console.log("'"+reStatement+"'");*/
+
+let reverseWords=[];
+for(const sen of slice){
+    //console.log(sen);
+    reverseWords.unshift(sen);
+}    console.log(reverseWords);
+const attach=reverseWords.join(' ');
+console.log("'"+attach+"'");
+/*Task 5
+Copy the given array into another array so that
+ changing the copy does not affect the original.
+ Change the first element of the copied array to 99.
+
+Input: 
+[1, 2, 3]
+
+Expected Output:
+
+Original: [1, 2, 3] Copy: [99, 2, 3]*/
+
+const products=[1, 2, 3];
+const copy=[];
+for(const pro of products){
+    copy.push(pro);
+}
+  copy[0]=99;
+console.log(products,'copy:',copy);
+
+/**
+ Task 6
+Given an array of student objects, 
+print each student’s
+ name and marks.
+
+[
+  { name: "John", marks: 85 },
+  { name: "Alice", marks: 90 }
+]
+Expected output:
+John scored 85
+Alice scored 90
+ */
+  const students=[
+    { name: "John", marks: 85 },
+   { name: "Alice", marks: 90 }
+  ];
+for(const stu of students){
+    //console.log(stu);
+
+    console.log(stu.name,"scored",stu.marks);
+}
+/**
+ Task 7
+Given a 2D array, update the value at second row
+ first item to 99 and print the updated array.
+
+input:
+
+[
+  [1, 2],
+  [3, 4],
+  [5, 6]
+]
+Expected Array:
+
+[
+  [1, 2],
+  [99, 4],
+  [5, 6]
+]
+ */
+const array2D=[
+  [1, 2],
+  [3, 4],
+  [5, 6]
+]
+array2D[1][0]=99;
+console.log(array2D);
