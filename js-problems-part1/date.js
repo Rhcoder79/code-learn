@@ -1,0 +1,11 @@
+const today= new Date();
+console.log(today);
+const date=new Date('2062-12-19');
+console.log(date.getMonth());
+const specific=new Date(2091,0,26);
+console.log(specific);
+specific.setMonth(10);
+console.log(specific);
+specific.setMonth(7);
+console.log(specific.toLocaleString());
+console.log(specific.toLocaleString('en-GB'));
