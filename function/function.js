@@ -1,15 +1,18 @@
 console.log('hello javascript');
+
 console.log('today we will learning function');
+
 function hello(){
     console.log('i am a developer');
 }
+//
 hello();//function ke call kora
 function moneybag(){
     var money=4600;
     console.log('I have ' + money+ ' taka');
 }
 moneybag();
-
+//
 function addMachine(input1, input2){
     let sum=input1+input2;
     console.log('Sum is = '+sum);
@@ -18,7 +21,7 @@ function addMachine(input1, input2){
 addMachine(75,79);
 const result=addMachine(70,78);
 console.log(result);
-
+//
 //prac 1
 function less(less1, les2){
     amount=less1-les2;
