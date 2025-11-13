@@ -10,7 +10,3 @@ var fileName= "pdfData.jpg";
     console.log('Delete');
  }
 
-var che='kkdsdsb.jpg h jj';
-//console.log(che.trim().includes('.jpg '));
-var trim=che.trim('jpg');
-console.log(trim.includes(' .jpg'));

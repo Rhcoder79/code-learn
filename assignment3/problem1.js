@@ -13,12 +13,4 @@ if(lastDay <=30){
         console.log(num, '-', ' rest');
     }
 }
-  for(b=1;b<=30;b++){
-
-    if(b%3===0){
-                console.log(b, '-' ,'medicine')
-
-        break
-    }
-   console.log(b, '-', 'rest');
-}    
+  for(b=1;b<=30;b++){if(b%3===0){         console.log(b, '-' ,'medicine')    break  } console.log(b, '-', 'rest');}    
