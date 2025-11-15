@@ -23,7 +23,7 @@ function layerDiscount(quantity){
         const remain=quantity-200;
         const remainPrice=remain*above;
         const price=firstPrice+secendPrice+remainPrice;
-        return  price
+        return  price;
     }
 }
 const t_shirt=layerDiscount(210);
