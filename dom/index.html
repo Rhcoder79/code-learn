@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of dom</title>
+    <style>
+        h1{color: gold;}
+        #food-title{
+            color: green;
+        }
+        .bg-yellew{
+            background-color:yellow ;
+            padding: 100px;
+        }
+        .bold{
+            border: 2px solid green;
+        }
+        .big{
+            font-size: 80px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header><h1>this is my header no banner</h1></header>
+    <main class="songs">
+    <h1>welcome to my dom</h1>
+    <Ul>
+        <li>shafayet</li>
+        <li>bonobash </li>
+        <li>jalali set</li>
+                <li>jalali set</li>
+
+    </Ul>
+            </main>
+
+    <section class="food">
+        <h1 id="food-title">foods <span>i</span> love</h1>
+        <ul>
+            <Li class="">rice</Li>
+            <Li>dal</Li>
+            <Li id="band">bhat</Li>
+            <Li class="food">pizza</Li>
+            <Li class="food">tomato</Li>
+            <Li class="food">save</Li>
+            <Li>pick</Li>
+            <span>poctal</span>
+        </ul>
+    </section>
+    <article>
+        <section id="old-dhaka">
+            <h1>hello dhaka</h1>
+            <p>Lorem ipsum dolor <span>kfkfff</span>sit amet consectetur adipisicing elit. Accusantium aperiam sint voluptatem nostrum. Amet quae
+                 repellat omnis nisi nihil <span>modi</span> eum tenetur, expedita atque <span>aua</span>veritatis voluptates aut quia porro ex.
+   
+            </p>
+        </section>
+    </article>
+        <script src="js/second.js"></script>
+    <main id="main-con">
+        <section class="section-item">
+            <h1>section title -1</h1>
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+            </ul>
+        </section>
+        <section class="section-item">
+            <h1>section title -2</h1>
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+            </ul>
+        </section>
+        <section class="section-item">
+            <h1>section title -3</h1>
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+            </ul>
+        </section>
+    </main>
+
+   <script>
+    //console.log('hello javascript')
+    const student={
+        name:'robiul hasan',
+        id:121,
+        study:function(subject){
+            console.log('studying subject:',subject);
+        }
+    }
+    const liCollection=document.getElementsByTagName('li');
+    console.log(liCollection);
+    for(const list of liCollection){
+        console.log(list.innerText);
+    }
+ const allHeadings=document.getElementsByTagName('h1');
+ for(const head of allHeadings){
+   // console.log(head.innerText);
+ }
+ //get by id
+ const foodtitleH1=document.getElementById('food-title');
+ console.log(foodtitleH1.innerText ='foods i will not eat');
+ const bandElement=document.getElementById('band');
+ bandElement.innerText='jalali sleeping bank';
+ //get elements by class name
+ const felment=document.getElementsByClassName('food');
+ console.log(felment);
+ for(const item of felment){
+    console.log(item.innerText);
+ }
+ const spanele=document.querySelectorAll('#old-dhaka p span');
+ for(const small of spanele){
+    console.log(small.innerText)
+ }
+ console.log(spanele);
+   </script>
+   <script src="js/hello.js"></script>
+</body>
+</html>
