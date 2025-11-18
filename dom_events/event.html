@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handler</title>
+</head>
+<body>
+    
+<h1 id="head">event handler text </h1>
+<button id="btn-update">update title</button> <br>
+<p id="user-info">no user</p>
+<button id="btn-login">login</button> <br>
+<!-- handle input text -->
+ <p id="can"">no name</p>
+ <input id="input" placeholder="your name" type="text">
+ <button id="btn-input">update</button>
+
+<script>
+    document.getElementById('btn-update')
+    .addEventListener('click',function(){
+        // console.log('btn-clicked');
+     const top=document.getElementById('head');
+    // console.log(top);
+    top.innerText='change the page title.';   }
+
+)
+//
+document.getElementById('btn-login')
+.addEventListener('click',function (){
+  //  console.log('login button clicked');
+  const userEl=document.getElementById('user-info');
+  userEl.innerText='you logged in successfully';
+})
+//set event listener
+document.getElementById('btn-input')
+.addEventListener('click',function (){
+   console.log('updated name')
+   // 2. get the text from the inout field
+   const nameInput=document.getElementById('input');
+   console.log(nameInput);
+   const naming=nameInput.value;
+   console.log(naming);
+   //set the name 
+const nameP=document.getElementById('can');
+  nameP.innerText=naming;
+}
+)
+</script>
+<script src="js/handler.js"></script>
+</body>
+</html>
