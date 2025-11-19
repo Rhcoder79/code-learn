@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events Summary</title>
+</head>
+<body>
+    <h1>dom event summary</h1>
+    <input id="user-input" type="text" placeholder="your name">
+    <button onclick="addName()">add name</button>
+    <button id="btn-add">add event listener</button>
+    <div id="name-con">
+     
+    </div>
+    <script>
+        function addName(){
+    //   console.log('button clicked');
+    const UserInput=document.getElementById('user-input');
+     //console.log(UserInput);
+     const newName=UserInput.value;
+     //console.log(newName);
+       const nameContain=document.getElementById('name-con');
+       //create p
+       const para=document.createElement('p');
+          para.innerText=newName;
+          //append
+          nameContain.appendChild(para);
+          UserInput.value='';
+    }
+    //add  event listener 
+    document.getElementById('btn-add')
+    .addEventListener('click',function (){
+        
+    })
+
+
+
+    </script>
+</body>
+</html>

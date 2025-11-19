@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubble</title>
+    <style>
+        body{
+            border: 2px solid red;
+            margin: 2px;
+        }
+            section{
+            border: 2px solid green;
+            margin: 2px;
+        }
+        ol{
+            border: 2px solid purple;
+        }
+        li{
+            border: 2px solid blue;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>explore event bubble</h1>
+ <section id="list-con">
+    <h3>list of thing</h3>
+    <ol id="item-list">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Culpa, maiores.</li>
+        <li id="item-3">Quaerat, illum.</li>
+        <li id="item-4">Consectetur, dolore.</li>
+        <li id="item-5">Dolorum, cum.</li>
+        <li id="item-6">Mollitia, cum!</li>
+    </ol>
+ </section>
+ <script>
+    //list item 2 click handler
+    document.getElementById('item-2')
+    .addEventListener('click',function (event){
+        console.log('item 2 was tas')   
+       // event.stopPropagation();
+    })
+     document.getElementById('item-2')
+    .addEventListener('click',function (event){
+        console.log('item 2 second  was tas')   
+    })
+     document.getElementById('item-2')
+    .addEventListener('click',function (event){
+        console.log('item 2 third was tas')   
+    })
+
+     document.getElementById('item-list')
+    .addEventListener('click',function (){
+        console.log('ol was tas');  
+    })
+    //section click handler
+    document.getElementById('list-con')
+    .addEventListener('click',function (){
+        console.log('section was tas');  
+    })
+    //body click handler
+    document.getElementById('body')
+    .addEventListener('click',function (){
+        console.log('body was tas');  
+    })
+ </script>
+</body>
+</html>
