@@ -93,7 +93,6 @@ function setInnerText(value){
      date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
-   console.log(transactionData)
  })
  //transfer money feature
   document.getElementById("transfer-money-btn")
@@ -146,7 +145,36 @@ function setInnerText(value){
     }
     transactionData.push(data)
    })
-    
+    //pay bill feature
+     document.getElementById("pay-bill-btn" )
+ .addEventListener('click',function (e){
+   e.preventDefault()
+   const selectBill=getValue('select-to-pay')
+   const billerAccountNumber=getValue("bill-account-number") 
+   const amountToPay=getInputNum("amount-to-pay")
+   const pinAdd=getInputNum("pay-bill-pin")
+   const AvailableBalance=getInnerText('avail-balance')
+     
+    if(billerAccountNumber.length<11){
+        alert('please provide valid number')
+       return ;
+    }
+    if(amountToPay<=0||amountToPay>AvailableBalance){
+      alert('invalid amount')
+      return
+    }
+    if(pinAdd!==validPin){
+        alert('please provide valid pin') 
+        return;
+    }
+    const totalBalance=AvailableBalance-amountToPay
+    setInnerText(totalBalance)
+    const data={
+      name:'Pay Bill',
+     date: new Date().toLocaleTimeString()
+   }
+   transactionData.push(data)
+ })
  //transaction
  document.getElementById("transaction-con")
  .addEventListener('click',function(){
