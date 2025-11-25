@@ -5,7 +5,7 @@ document.getElementById('lobtn').addEventListener('click',function (e){
   //  console.log('touched');
     //console.log(e);
     const mobile=01880012667
-    const pin=1470
+    const pin=3690
     const phoneValue=document.getElementById('phone').value
     const pinValue=document.getElementById('pin-num').value
     const mobCon=parseInt(phoneValue);
