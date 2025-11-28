@@ -28,11 +28,11 @@
             <h1 id="increase" class="font-bold">0</h1>
             <img src="img/heart.png" alt=""></button>
         <button class="flex justify-center  gap-1 p-3 bg-[#CCE7D2]  rounded-3xl w-32 h-13 ">
-            <h1 id="coin-num" class="font-bold">100 </h1 >
+            <h1 id="coin-num" class="font-bold">500 </h1 >
             <img src="img/coin.png" alt="">
             </button>
         <button class="p-3 bg-[#00A63E] text-center  rounded-3xl w-32 h-13 ">
-            <h1 class="text-white font-bold"> 0 Copy</h1></button>
+            <h1 class="text-white font-bold"><span id="copy-count">0</span> Copy</h1></button>
     </div>
    </div>
    <div class=" bg-gradient-to-b from-[#013223] to-[#008747] flex flex-col justify-evenly items-center h-60 ">
@@ -56,7 +56,7 @@
             <button>All</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="copy1"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call1"><i  class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -74,7 +74,7 @@
             <button>Police</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy2"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call2"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -92,16 +92,18 @@
             <button>Fire</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy3" ><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call3"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
     <div id="call-history"  class="box four row-span-3 ">
       <div class="flex  justify-between">
         <button><i class="fa-solid fa-clock-rotate-left text-gray-500"></i> <span class="font-bold">Call History</span></button>
-        <button class="bg-[#00A63E] text-white rounded-3xl w-28 h-10">Clear</button>
+        <button id="clear-btn" class="bg-[#00A63E] text-white rounded-3xl w-28 h-10">Clear</button>
     </div>
-     
+    <div id="history-btn" >
+      
+    </div>
     </div>
     <div class="box five">
          <div class="chi-1">
@@ -117,7 +119,7 @@
             <button>Health</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy4"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call4"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -135,7 +137,7 @@
             <button>Help</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy5"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call5"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -153,7 +155,7 @@
             <button>Govt</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy6"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call6"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -171,7 +173,7 @@
             <button>Electricity</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy7"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call7"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -189,7 +191,7 @@
             <button>NGO</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy8"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call8"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
@@ -207,7 +209,7 @@
             <button>Travel</button>
         </div>
         <div class="chi-4">
-            <button><i class="fa-regular fa-copy"></i> Copy</button>
+            <button  id="copy9"><i class="fa-regular fa-copy"></i> Copy</button>
             <button id="call9"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>

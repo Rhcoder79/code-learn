@@ -91,6 +91,178 @@ document.getElementById("heart9")
    heartNum.innerText=totalHeart;
    
 })
+//copy function started
+document.getElementById("copy1")
+.addEventListener('click',async function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count");
+     const grow=copyNum.innerText;
+    const convert=parseInt(grow);
+     const call=document.getElementById("call-num1").innerText;
+     try{
+     await  navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+})
+document.getElementById("copy2")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num2").innerText;
+     try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy3")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num3").innerText;
+     try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy4")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num4").innerText;
+    try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy5")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num5").innerText;
+     try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy6")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num6").innerText;
+    try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy7")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num7").innerText;
+     try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy8")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num8").innerText;
+    try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+document.getElementById("copy9")
+.addEventListener('click',function(e){
+    e.preventDefault()
+    const copyNum=document.getElementById("copy-count")
+     const grow=copyNum.innerText
+    const convert=parseInt(grow)
+     const call=document.getElementById("call-num9").innerText;
+     try{
+      navigator.clipboard.writeText(call);
+          alert('number is copied'+' '+call);
+      const totalCopy=convert+1;
+        copyNum.innerText=totalCopy;
+     }
+   catch(err){
+    console.error('copied failed',err )
+    alert('failed to copy')
+   }
+   
+})
+
 //call button function started
 document.getElementById('call1')
 .addEventListener('click',function(e){
@@ -111,11 +283,29 @@ document.getElementById('call1')
   coin.innerText=totalCoin;
   
   const data={
-      title:'National Emergency Number',
-     callNumber:999,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+   const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+  // const addText=Object.values(data);
+  // history.innerText=addText;
 })
 document.getElementById('call2')
 .addEventListener('click',function(e){
@@ -136,11 +326,27 @@ document.getElementById('call2')
   coin.innerText=totalCoin;
     
   const data={
-      title:'Police Helpline Number',
-     callNumber:999,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+   const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
 })
 document.getElementById('call3')
 .addEventListener('click',function(e){
@@ -161,13 +367,29 @@ document.getElementById('call3')
   coin.innerText=totalCoin;
 
   const data={
-      title:'Fire Service Number',
-     callNumber:999,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
-    
+    const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
 })
+
 document.getElementById('call4')
 .addEventListener('click',function(e){
     e.preventDefault()
@@ -186,13 +408,29 @@ document.getElementById('call4')
   const totalCoin=convert-20
   coin.innerText=totalCoin;
   const data={
-      title:'Ambulance Service',
-     callNumber:1994-999999,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+   const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
     
-})
+}) 
 document.getElementById('call5')
 .addEventListener('click',function(e){
     e.preventDefault()
@@ -211,11 +449,28 @@ document.getElementById('call5')
   const totalCoin=convert-20
   coin.innerText=totalCoin;
     const data={
-      title:'Women & Child Helpline',
-     callNumber:109,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+     const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+
 })
 document.getElementById('call6')
 .addEventListener('click',function(e){
@@ -236,11 +491,28 @@ document.getElementById('call6')
   coin.innerText=totalCoin;
     
    const data={
-      title:'Anti-Corruption Helpline',
-     callNumber:106,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+     const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+
 })
 document.getElementById('call7')
 .addEventListener('click',function(e){
@@ -259,12 +531,29 @@ document.getElementById('call7')
  
   const totalCoin=convert-20
   coin.innerText=totalCoin;
-  const data={
-      title:'Electricity Helpline',
-     callNumber:16216,
+   const data={
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+     const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+
     
 })
 document.getElementById('call8')
@@ -285,11 +574,28 @@ document.getElementById('call8')
   const totalCoin=convert-20
   coin.innerText=totalCoin;
    const data={
-      title:'Brac Helpline',
-     callNumber:16445,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+     const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+
     
 })
 document.getElementById('call9')
@@ -310,10 +616,33 @@ document.getElementById('call9')
   const totalCoin=convert-20
   coin.innerText=totalCoin;
     const data={
-      title:'Bangladesh Railway Helpline',
-     callNumber:163,
+      title:service,
+     callNumber:call,
        date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+     const history=document.getElementById('history-btn')
+history.innerText='';
+for(const info of transactionData){
+      const division=document.createElement('div')
+      division.innerHTML= `<div class="  bg-[#F4F5F6]  rounded-xl  flex justify-between items-center mt-2">
+        <div class="ml-3">
+            <h1>${info.title}</h1>
+            <p>${info.callNumber}</p>
+        </div>
+        <div>
+       <h1>${info.date}</h1>
+   </div>
+      </div>`
+      history.appendChild(division);
+   }    
+
+
 })
+
 // call history
+ document.getElementById("clear-btn" )
+ .addEventListener('click',function(){
+   document.getElementById('history-btn').remove()
+
+ })
