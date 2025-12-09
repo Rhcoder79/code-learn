@@ -81,23 +81,25 @@ generations.</p>
     <div class="text-center p-2" ><h1 class="text-[#1F2937] text-2xl font-bold">Choose Your Trees</h1></div>
     <div class="grid grid-cols-6 p-2 gap-2">
         <div class="trees-catagories bg-[#fff] border-black border-[2px]">
-         <h3 class="font-bold text-xl">Categories</h3>
-         <ul class="catar font-bold flex flex-col gap-1 ml-1  text-[#1F2937]">
-            <li>All Trees</li>
+         <h3 class="font-bold text-xl ml-1">Categories</h3>
+         <h4 class="text-[#1F2937] hover:bg-[#15803D] hover:text-[#fff] font-bold ml-1">All Trees</h4>
+         <ul id="all-category"  class="catar font-bold flex flex-col gap-4 mt-4 ml-1  text-[#1F2937]">
+            
+            <!-- 
             <li>Fruit Trees</li>
             <li>Flowering Trees</li>
-            <li>Shade Trees</li>
+            <li>Shade Trees</li> 
             <li>Medicinal Trees</li>
             <li>Timber Trees</li>
             <li>Evergreen Trees</li>
             <li>Ornamental Plants</li>
             <li>Bamboo</li>
             <li>Climbers</li>
-            <li>Aquatic Plants</li>
+            <li>Aquatic Plants</li> -->
          </ul>
     </div>
-    <div class="cards-section bg-[#fff] col-span-4 grid grid-cols-3 gap-1 border-black border-[2px]">
-     <div class="cards">
+    <div id="card-container"  class="cards-section bg-[#fff] col-span-4 grid grid-cols-3 gap-1 border-black border-[2px]">
+     <!-- <div class="cards">
         <div><img src="assets/hero-leaf1.png" alt=""></div>
      <div >
     <h3 >Mango tree</h3>
@@ -213,10 +215,10 @@ generations.</p>
                    <button   class="btn bg-[#15803D] text-white  mt-5 w-full rounded-3xl" >Add To Card</button>
 
 </div>
-     </div>
+     </div> -->
     </div>
     <div class="order-info border-black border-[2px]">
-        <h2>Your Card</h2>
+        <h2 class="font-bold text-[#1f2937] ml-1">Your Card</h2>
     </div>
 
     </div>
@@ -273,5 +275,6 @@ By joining our campaign, you help restore forests, create habitats for wildlife,
     </form><br><br>
     </section>
     <footer class="bg-[#166534] text-center p-4"><p class="text-white">© 2025 Green Earth. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
 </body>
 </html>
